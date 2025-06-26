@@ -83,7 +83,7 @@ const Header: React.FC<HeaderProps> = () => {
             <Button variant="secondary" size="icon" className="rounded-full">
               <Avatar>
                 <AvatarImage src="https://ui.shadcn.com/avatars/01.png" alt="@storeowner" />
-                <AvatarFallback>店主</AvatarFallback>
+                <AvatarFallback>SO</AvatarFallback>
               </Avatar>
               <span className="sr-only">切换用户菜单</span>
             </Button>
