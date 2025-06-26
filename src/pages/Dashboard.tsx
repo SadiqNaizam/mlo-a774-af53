@@ -16,7 +16,7 @@ const recentOrdersData: ActivityItem[] = [
   {
     id: 1,
     avatarFallback: 'OM',
-    primaryText: '奥利维亚·马丁',
+    primaryText: 'Olivia Martin',
     secondaryText: 'olivia.martin@email.com',
     valueText: '+$1,999.00',
     avatarSrc: 'https://ui.shadcn.com/avatars/01.png',
@@ -24,7 +24,7 @@ const recentOrdersData: ActivityItem[] = [
   {
     id: 2,
     avatarFallback: 'JL',
-    primaryText: '杰克逊·李',
+    primaryText: 'Jackson Lee',
     secondaryText: 'jackson.lee@email.com',
     valueText: '+$39.00',
     avatarSrc: 'https://ui.shadcn.com/avatars/02.png',
@@ -32,7 +32,7 @@ const recentOrdersData: ActivityItem[] = [
   {
     id: 3,
     avatarFallback: 'IN',
-    primaryText: '伊莎贝拉·阮',
+    primaryText: 'Isabella Nguyen',
     secondaryText: 'isabella.nguyen@email.com',
     valueText: '+$299.00',
     avatarSrc: 'https://ui.shadcn.com/avatars/03.png',
@@ -40,14 +40,14 @@ const recentOrdersData: ActivityItem[] = [
   {
     id: 4,
     avatarFallback: 'WK',
-    primaryText: '威廉·金',
+    primaryText: 'William Kim',
     secondaryText: 'will@email.com',
     valueText: '+$99.00',
   },
   {
     id: 5,
     avatarFallback: 'SD',
-    primaryText: '索菲亚·戴维斯',
+    primaryText: 'Sofia Davis',
     secondaryText: 'sofia.davis@email.com',
     valueText: '+$39.00',
     avatarSrc: 'https://ui.shadcn.com/avatars/05.png',
@@ -59,7 +59,7 @@ const topProductsData: ActivityItem[] = [
         id: 'prod-1',
         primaryText: '人体工学办公椅',
         secondaryText: 'SKU: CH-001',
-        valueText: '+1,230 已售',
+        valueText: '已售 +1,230',
         avatarSrc: 'https://placehold.co/40x40/e2e8f0/64748b?text=P1',
         avatarFallback: 'P1'
     },
@@ -67,15 +67,15 @@ const topProductsData: ActivityItem[] = [
         id: 'prod-2',
         primaryText: '无线机械键盘',
         secondaryText: 'SKU: KB-012',
-        valueText: '+980 已售',
+        valueText: '已售 +980',
         avatarSrc: 'https://placehold.co/40x40/e2e8f0/64748b?text=P2',
         avatarFallback: 'P2'
     },
     {
         id: 'prod-3',
-        primaryText: '4K 超高清显示器',
+        primaryText: '4K超高清显示器',
         secondaryText: 'SKU: MN-054',
-        valueText: '+750 已售',
+        valueText: '已售 +750',
         avatarSrc: 'https://placehold.co/40x40/e2e8f0/64748b?text=P3',
         avatarFallback: 'P3'
     }
@@ -133,7 +133,7 @@ const Dashboard = () => {
                                 <CardHeader className="flex flex-row items-center justify-between">
                                     <div>
                                         <CardTitle>最近订单</CardTitle>
-                                        <CardDescription>本月您有 265 个新订单。</CardDescription>
+                                        <CardDescription>您本月有265个新订单。</CardDescription>
                                     </div>
                                     <Link to="/orders" className="text-sm font-medium text-primary hover:underline">查看全部</Link>
                                 </CardHeader>
