@@ -31,7 +31,7 @@ import { Link } from 'react-router-dom';
 const orders = [
   {
     id: 'ORD001',
-    customerName: '利亚姆·约翰逊',
+    customerName: 'Liam Johnson',
     email: 'liam@example.com',
     date: '2023-07-15',
     status: '已送达',
@@ -39,7 +39,7 @@ const orders = [
   },
   {
     id: 'ORD002',
-    customerName: '奥利维亚·史密斯',
+    customerName: 'Olivia Smith',
     email: 'olivia@example.com',
     date: '2023-07-16',
     status: '处理中',
@@ -47,7 +47,7 @@ const orders = [
   },
   {
     id: 'ORD003',
-    customerName: '诺亚·威廉姆斯',
+    customerName: 'Noah Williams',
     email: 'noah@example.com',
     date: '2023-07-17',
     status: '已取消',
@@ -55,7 +55,7 @@ const orders = [
   },
   {
     id: 'ORD004',
-    customerName: '艾玛·布朗',
+    customerName: 'Emma Brown',
     email: 'emma@example.com',
     date: '2023-07-18',
     status: '已送达',
@@ -63,7 +63,7 @@ const orders = [
   },
   {
     id: 'ORD005',
-    customerName: '艾娃·琼斯',
+    customerName: 'Ava Jones',
     email: 'ava@example.com',
     date: '2023-07-19',
     status: '处理中',
@@ -71,7 +71,7 @@ const orders = [
   },
   {
     id: 'ORD006',
-    customerName: '詹姆斯·戴维斯',
+    customerName: 'James Davis',
     email: 'james@example.com',
     date: '2023-07-20',
     status: '已送达',
@@ -123,7 +123,7 @@ const Orders: React.FC = () => {
                       <TableHeader>
                         <TableRow>
                           <TableHead>订单ID</TableHead>
-                          <TableHead>客户</TableHead>
+                          <TableHead>顾客</TableHead>
                           <TableHead>日期</TableHead>
                           <TableHead>状态</TableHead>
                           <TableHead className="text-right">总计</TableHead>
@@ -148,7 +148,7 @@ const Orders: React.FC = () => {
                                     <DropdownMenuTrigger asChild>
                                         <Button aria-haspopup="true" size="icon" variant="ghost">
                                             <MoreHorizontal className="h-4 w-4" />
-                                            <span className="sr-only">切换菜单</span>
+                                            <span className="sr-only">Toggle menu</span>
                                         </Button>
                                     </DropdownMenuTrigger>
                                     <DropdownMenuContent align="end">
@@ -159,7 +159,7 @@ const Orders: React.FC = () => {
                                 </DropdownMenu>
                             </TableCell>
                           </TableRow>
-                        ))}\
+                        ))ж
                       </TableBody>
                     </Table>
                   </CardContent>
