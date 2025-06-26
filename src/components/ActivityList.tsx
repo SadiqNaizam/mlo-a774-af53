@@ -41,7 +41,7 @@ const ActivityList: React.FC<ActivityListProps> = ({ items }) => {
           </div>
           <div className="ml-auto font-medium">{item.valueText}</div>
         </div>
-      ))}\
+      ))}
     </div>
   );
 };
