@@ -27,24 +27,24 @@ const salesData = [
 ];
 
 const trafficData = [
-    { source: 'Google', visitors: 1200 },
+    { source: '谷歌', visitors: 1200 },
     { source: 'Facebook', visitors: 800 },
-    { source: 'Direct', visitors: 650 },
+    { source: '直接访问', visitors: 650 },
     { source: 'Instagram', visitors: 400 },
-    { source: 'Other', visitors: 250 },
+    { source: '其他', visitors: 250 },
 ];
 
 const customerData = [
-    { month: 'Jan', new: 150, returning: 80 },
-    { month: 'Feb', new: 180, returning: 120 },
-    { month: 'Mar', new: 220, returning: 160 },
-    { month: 'Apr', new: 200, returning: 150 },
+    { month: '一月', new: 150, returning: 80 },
+    { month: '二月', new: 180, returning: 120 },
+    { month: '三月', new: 220, returning: 160 },
+    { month: '四月', new: 200, returning: 150 },
 ];
 
 const topProducts = [
-    { id: 'PROD-001', name: 'Modern Desk Lamp', sales: 150, revenue: '$4,500' },
-    { id: 'PROD-002', name: 'Ergonomic Chair', sales: 90, revenue: '$18,000' },
-    { id: 'PROD-003', name: 'Wireless Mouse', sales: 300, revenue: '$7,500' },
+    { id: 'PROD-001', name: '现代台灯', sales: 150, revenue: '$4,500' },
+    { id: 'PROD-002', name: '人体工学椅', sales: 90, revenue: '$18,000' },
+    { id: 'PROD-003', name: '无线鼠标', sales: 300, revenue: '$7,500' },
 ]
 
 const Analytics = () => {
@@ -60,20 +60,20 @@ const Analytics = () => {
                     <Tabs defaultValue="sales">
                         <div className="flex items-center">
                             <TabsList>
-                                <TabsTrigger value="sales">Sales</TabsTrigger>
-                                <TabsTrigger value="traffic">Traffic</TabsTrigger>
-                                <TabsTrigger value="customers">Customers</TabsTrigger>
+                                <TabsTrigger value="sales">销售</TabsTrigger>
+                                <TabsTrigger value="traffic">流量</TabsTrigger>
+                                <TabsTrigger value="customers">客户</TabsTrigger>
                             </TabsList>
                             <div className="ml-auto flex items-center gap-2">
                                 <Select defaultValue="last-30-days">
                                     <SelectTrigger className="w-[180px]">
-                                        <SelectValue placeholder="Select date range" />
+                                        <SelectValue placeholder="选择日期范围" />
                                     </SelectTrigger>
                                     <SelectContent>
-                                        <SelectItem value="today">Today</SelectItem>
-                                        <SelectItem value="last-7-days">Last 7 Days</SelectItem>
-                                        <SelectItem value="last-30-days">Last 30 Days</SelectItem>
-                                        <SelectItem value="last-90-days">Last 90 Days</SelectItem>
+                                        <SelectItem value="today">今天</SelectItem>
+                                        <SelectItem value="last-7-days">最近7天</SelectItem>
+                                        <SelectItem value="last-30-days">最近30天</SelectItem>
+                                        <SelectItem value="last-90-days">最近90天</SelectItem>
                                     </SelectContent>
                                 </Select>
                             </div>
@@ -83,8 +83,8 @@ const Analytics = () => {
                         <TabsContent value="sales" className="space-y-4">
                             <Card>
                                 <CardHeader>
-                                    <CardTitle>Sales Overview</CardTitle>
-                                    <CardDescription>A look at your sales performance over the selected period.</CardDescription>
+                                    <CardTitle>销售概览</CardTitle>
+                                    <CardDescription>在选定时期内您的销售业绩概览。</CardDescription>
                                 </CardHeader>
                                 <CardContent className="h-[350px]">
                                     <ResponsiveContainer width="100%" height="100%">
@@ -94,22 +94,22 @@ const Analytics = () => {
                                             <YAxis />
                                             <Tooltip content={<ChartTooltipContent />} />
                                             <Legend />
-                                            <Line type="monotone" dataKey="sales" stroke="#8884d8" activeDot={{ r: 8 }} />
+                                            <Line type="monotone" dataKey="sales" name="销售额" stroke="#8884d8" activeDot={{ r: 8 }} />
                                         </LineChart>
                                     </ResponsiveContainer>
                                 </CardContent>
                             </Card>
                             <Card>
                                 <CardHeader>
-                                    <CardTitle>Top Selling Products</CardTitle>
+                                    <CardTitle>最畅销产品</CardTitle>
                                 </CardHeader>
                                 <CardContent>
                                     <Table>
                                         <TableHeader>
                                             <TableRow>
-                                                <TableHead>Product</TableHead>
-                                                <TableHead>Units Sold</TableHead>
-                                                <TableHead>Total Revenue</TableHead>
+                                                <TableHead>产品</TableHead>
+                                                <TableHead>销售单位</TableHead>
+                                                <TableHead>总收入</TableHead>
                                             </TableRow>
                                         </TableHeader>
                                         <TableBody>
@@ -119,7 +119,7 @@ const Analytics = () => {
                                                     <TableCell>{p.sales}</TableCell>
                                                     <TableCell>{p.revenue}</TableCell>
                                                 </TableRow>
-                                            ))}
+                                            ))}\
                                         </TableBody>
                                     </Table>
                                 </CardContent>
@@ -130,8 +130,8 @@ const Analytics = () => {
                         <TabsContent value="traffic" className="space-y-4">
                             <Card>
                                 <CardHeader>
-                                    <CardTitle>Website Traffic Sources</CardTitle>
-                                    <CardDescription>Where your visitors are coming from.</CardDescription>
+                                    <CardTitle>网站流量来源</CardTitle>
+                                    <CardDescription>您的访客来自哪里。</CardDescription>
                                 </CardHeader>
                                 <CardContent className="h-[350px]">
                                     <ResponsiveContainer width="100%" height="100%">
@@ -143,7 +143,7 @@ const Analytics = () => {
                                                 cursor={{fill: "hsl(var(--muted))"}}
                                                 content={<ChartTooltipContent hideLabel />}
                                             />
-                                            <Bar dataKey="visitors" fill="hsl(var(--primary))" radius={[4, 4, 0, 0]} />
+                                            <Bar dataKey="visitors" name="访客数" fill="hsl(var(--primary))" radius={[4, 4, 0, 0]} />
                                         </BarChart>
                                     </ResponsiveContainer>
                                 </CardContent>
@@ -154,8 +154,8 @@ const Analytics = () => {
                         <TabsContent value="customers" className="space-y-4">
                             <Card>
                                 <CardHeader>
-                                    <CardTitle>New vs. Returning Customers</CardTitle>
-                                    <CardDescription>Analysis of your customer base growth.</CardDescription>
+                                    <CardTitle>新客户 vs. 回头客</CardTitle>
+                                    <CardDescription>您的客户群增长分析。</CardDescription>
                                 </CardHeader>
                                 <CardContent className="h-[350px]">
                                      <ResponsiveContainer width="100%" height="100%">
@@ -166,8 +166,8 @@ const Analytics = () => {
                                                 <YAxis />
                                                 <Tooltip content={<ChartTooltipContent />} />
                                                 <Legend />
-                                                <Bar dataKey="new" fill="#2563eb" name="New Customers" radius={4} />
-                                                <Bar dataKey="returning" fill="#60a5fa" name="Returning Customers" radius={4} />
+                                                <Bar dataKey="new" fill="#2563eb" name="新客户" radius={4} />
+                                                <Bar dataKey="returning" fill="#60a5fa" name="回头客" radius={4} />
                                             </BarChart>
                                         </ChartContainer>
                                     </ResponsiveContainer>
