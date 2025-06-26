@@ -16,7 +16,7 @@ const recentOrdersData: ActivityItem[] = [
   {
     id: 1,
     avatarFallback: 'OM',
-    primaryText: 'Olivia Martin',
+    primaryText: '奥利维亚·马丁',
     secondaryText: 'olivia.martin@email.com',
     valueText: '+$1,999.00',
     avatarSrc: 'https://ui.shadcn.com/avatars/01.png',
@@ -24,7 +24,7 @@ const recentOrdersData: ActivityItem[] = [
   {
     id: 2,
     avatarFallback: 'JL',
-    primaryText: 'Jackson Lee',
+    primaryText: '杰克逊·李',
     secondaryText: 'jackson.lee@email.com',
     valueText: '+$39.00',
     avatarSrc: 'https://ui.shadcn.com/avatars/02.png',
@@ -32,7 +32,7 @@ const recentOrdersData: ActivityItem[] = [
   {
     id: 3,
     avatarFallback: 'IN',
-    primaryText: 'Isabella Nguyen',
+    primaryText: '伊莎贝拉·阮',
     secondaryText: 'isabella.nguyen@email.com',
     valueText: '+$299.00',
     avatarSrc: 'https://ui.shadcn.com/avatars/03.png',
@@ -40,14 +40,14 @@ const recentOrdersData: ActivityItem[] = [
   {
     id: 4,
     avatarFallback: 'WK',
-    primaryText: 'William Kim',
+    primaryText: '威廉·金',
     secondaryText: 'will@email.com',
     valueText: '+$99.00',
   },
   {
     id: 5,
     avatarFallback: 'SD',
-    primaryText: 'Sofia Davis',
+    primaryText: '索菲亚·戴维斯',
     secondaryText: 'sofia.davis@email.com',
     valueText: '+$39.00',
     avatarSrc: 'https://ui.shadcn.com/avatars/05.png',
@@ -57,25 +57,25 @@ const recentOrdersData: ActivityItem[] = [
 const topProductsData: ActivityItem[] = [
     {
         id: 'prod-1',
-        primaryText: 'Ergonomic Office Chair',
+        primaryText: '人体工学办公椅',
         secondaryText: 'SKU: CH-001',
-        valueText: '+1,230 sold',
+        valueText: '+1,230 已售',
         avatarSrc: 'https://placehold.co/40x40/e2e8f0/64748b?text=P1',
         avatarFallback: 'P1'
     },
     {
         id: 'prod-2',
-        primaryText: 'Wireless Mechanical Keyboard',
+        primaryText: '无线机械键盘',
         secondaryText: 'SKU: KB-012',
-        valueText: '+980 sold',
+        valueText: '+980 已售',
         avatarSrc: 'https://placehold.co/40x40/e2e8f0/64748b?text=P2',
         avatarFallback: 'P2'
     },
     {
         id: 'prod-3',
-        primaryText: '4K UHD Monitor',
+        primaryText: '4K 超高清显示器',
         secondaryText: 'SKU: MN-054',
-        valueText: '+750 sold',
+        valueText: '+750 已售',
         avatarSrc: 'https://placehold.co/40x40/e2e8f0/64748b?text=P3',
         avatarFallback: 'P3'
     }
@@ -95,30 +95,30 @@ const Dashboard = () => {
                     {/* KPI Cards Section */}
                     <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
                         <KPIWidgetCard 
-                            title="Total Revenue"
+                            title="总收入"
                             metric="$45,231.89"
                             change="+20.1%"
                             changeType="increase"
                             Icon={DollarSign}
                         />
                         <KPIWidgetCard 
-                            title="New Customers"
+                            title="新客户"
                             metric="+2350"
                             change="+180.1%"
                             changeType="increase"
                             Icon={Users}
                         />
                         <KPIWidgetCard 
-                            title="New Orders"
+                            title="新订单"
                             metric="1,245"
                             change="-2.4%"
                             changeType="decrease"
                             Icon={CreditCard}
                         />
                         <KPIWidgetCard 
-                            title="Active Now"
+                            title="当前在线"
                             metric="573"
-                            change="+10 since last hour"
+                            change="+10 自上一小时"
                             changeType="increase"
                             Icon={Activity}
                         />
@@ -132,10 +132,10 @@ const Dashboard = () => {
                             <Card>
                                 <CardHeader className="flex flex-row items-center justify-between">
                                     <div>
-                                        <CardTitle>Recent Orders</CardTitle>
-                                        <CardDescription>You have 265 new orders this month.</CardDescription>
+                                        <CardTitle>最近订单</CardTitle>
+                                        <CardDescription>本月您有 265 个新订单。</CardDescription>
                                     </div>
-                                    <Link to="/orders" className="text-sm font-medium text-primary hover:underline">View All</Link>
+                                    <Link to="/orders" className="text-sm font-medium text-primary hover:underline">查看全部</Link>
                                 </CardHeader>
                                 <CardContent>
                                     <ActivityList items={recentOrdersData} />
@@ -144,10 +144,10 @@ const Dashboard = () => {
                              <Card>
                                 <CardHeader className="flex flex-row items-center justify-between">
                                     <div>
-                                        <CardTitle>Top Products</CardTitle>
-                                        <CardDescription>Your best-selling items.</CardDescription>
+                                        <CardTitle>热门产品</CardTitle>
+                                        <CardDescription>您最畅销的商品。</CardDescription>
                                     </div>
-                                    <Link to="/products" className="text-sm font-medium text-primary hover:underline">View All</Link>
+                                    <Link to="/products" className="text-sm font-medium text-primary hover:underline">查看全部</Link>
                                 </CardHeader>
                                 <CardContent>
                                     <ActivityList items={topProductsData} />
