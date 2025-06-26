@@ -27,8 +27,8 @@ import { Input } from "@/components/ui/input";
 
 // Define the form schema using Zod
 const formSchema = z.object({
-  email: z.string().email({ message: "Invalid email address." }),
-  password: z.string().min(6, { message: "Password must be at least 6 characters." }),
+  email: z.string().email({ message: "无效的邮箱地址。" }),
+  password: z.string().min(6, { message: "密码必须至少为6个字符。" }),
 });
 
 const Login = () => {
@@ -56,9 +56,9 @@ const Login = () => {
     <div className="flex items-center justify-center min-h-screen bg-gray-100 dark:bg-gray-900">
       <Card className="w-full max-w-sm mx-4">
         <CardHeader className="text-center">
-          <CardTitle className="text-2xl">StorePulse</CardTitle>
+          <CardTitle className="text-2xl">商店脉搏</CardTitle>
           <CardDescription>
-            Welcome back! Please enter your credentials to login.
+            欢迎回来！请输入您的凭据以登录。
           </CardDescription>
         </CardHeader>
         <CardContent>
@@ -69,7 +69,7 @@ const Login = () => {
                 name="email"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel>Email</FormLabel>
+                    <FormLabel>电子邮件</FormLabel>
                     <FormControl>
                       <Input placeholder="name@example.com" {...field} />
                     </FormControl>
@@ -82,7 +82,7 @@ const Login = () => {
                 name="password"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel>Password</FormLabel>
+                    <FormLabel>密码</FormLabel>
                     <FormControl>
                       <Input type="password" placeholder="••••••••" {...field} />
                     </FormControl>
@@ -91,7 +91,7 @@ const Login = () => {
                 )}
               />
               <Button type="submit" className="w-full">
-                Login
+                登录
               </Button>
             </form>
           </Form>
@@ -99,7 +99,7 @@ const Login = () => {
         <CardFooter className="flex justify-center">
             <p className="text-sm text-center text-muted-foreground">
                 <Link to="#" className="underline">
-                    Forgot your password?
+                    忘记密码？
                 </Link>
             </p>
         </CardFooter>
