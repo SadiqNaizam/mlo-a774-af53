@@ -28,11 +28,11 @@ const productsData = [
   },
   {
     id: 'prod_2',
-    name: '工匠茶具套装',
+    name: '手工茶具套装',
     sku: 'ATS-005',
     price: 45.50,
     stock: 8,
-    status: '低库存',
+    status: '库存不足',
   },
   {
     id: 'prod_3',
@@ -60,13 +60,13 @@ const productsData = [
   },
 ];
 
-type ProductStatus = '有货' | '低库存' | '缺货';
+type ProductStatus = '有货' | '库存不足' | '缺货';
 
 const getBadgeVariant = (status: ProductStatus) => {
   switch (status) {
     case '有货':
       return 'default'; // A neutral or positive color
-    case '低库存':
+    case '库存不足':
       return 'secondary'; // A warning color
     case '缺货':
       return 'destructive'; // A danger/error color
@@ -103,7 +103,7 @@ const Products = () => {
                           <DialogHeader>
                               <DialogTitle>添加新产品</DialogTitle>
                               <DialogDescription>
-                                  请填写以下详细信息以将新产品添加到您的库存中。
+                                  请填写以下详细信息，将新产品添加到您的库存中。
                               </DialogDescription>
                           </DialogHeader>
                           <div className="grid gap-4 py-4">
@@ -180,7 +180,7 @@ const Products = () => {
                             <DropdownMenuTrigger asChild>
                                 <Button aria-haspopup="true" size="icon" variant="ghost">
                                     <MoreHorizontal className="h-4 w-4" />
-                                    <span className="sr-only">切换菜单</span>
+                                    <span className="sr-only">Toggle menu</span>
                                 </Button>
                             </DropdownMenuTrigger>
                             <DropdownMenuContent align="end">
@@ -191,7 +191,7 @@ const Products = () => {
                         </DropdownMenu>
                       </TableCell>
                     </TableRow>
-                  ))}\
+                  ))}
                 </TableBody>
               </Table>
             </CardContent>
