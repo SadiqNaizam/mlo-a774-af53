@@ -24,7 +24,7 @@ const ActivityList: React.FC<ActivityListProps> = ({ items }) => {
   console.log('ActivityList loaded');
 
   if (!items || items.length === 0) {
-    return <p className="text-sm text-muted-foreground text-center py-4">No recent activity.</p>;
+    return <p className="text-sm text-muted-foreground text-center py-4">近期无活动。</p>;
   }
 
   return (
@@ -41,7 +41,7 @@ const ActivityList: React.FC<ActivityListProps> = ({ items }) => {
           </div>
           <div className="ml-auto font-medium">{item.valueText}</div>
         </div>
-      ))}
+      ))}\
     </div>
   );
 };
