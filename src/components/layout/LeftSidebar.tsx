@@ -14,10 +14,10 @@ interface LeftSidebarProps {
 }
 
 const navItems = [
-  { to: '/', icon: LayoutDashboard, label: 'Dashboard' },
-  { to: '/orders', icon: ShoppingCart, label: 'Orders' },
-  { to: '/products', icon: Package, label: 'Products' },
-  { to: '/analytics', icon: LineChart, label: 'Analytics' },
+  { to: '/', icon: LayoutDashboard, label: '仪表盘' },
+  { to: '/orders', icon: ShoppingCart, label: '订单' },
+  { to: '/products', icon: Package, label: '产品' },
+  { to: '/analytics', icon: LineChart, label: '分析' },
 ];
 
 const LeftSidebar: React.FC<LeftSidebarProps> = ({ isOpen }) => {
@@ -35,7 +35,7 @@ const LeftSidebar: React.FC<LeftSidebarProps> = ({ isOpen }) => {
             <div className={cn("flex h-16 items-center border-b px-6", {"justify-start": isOpen, "justify-center": !isOpen})}>
                 <NavLink to="/" className="flex items-center gap-2 font-semibold">
                     <Package className="h-6 w-6" />
-                    {isOpen && <span className="">StorePulse</span>}
+                    {isOpen && <span className="">商店脉搏</span>}
                 </NavLink>
             </div>
             <div className="flex-1">
@@ -54,7 +54,7 @@ const LeftSidebar: React.FC<LeftSidebarProps> = ({ isOpen }) => {
                                 </TooltipContent>
                             )}
                         </Tooltip>
-                    ))}
+                    ))}\
                 </nav>
             </div>
         </div>
