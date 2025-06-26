@@ -31,61 +31,61 @@ import { Link } from 'react-router-dom';
 const orders = [
   {
     id: 'ORD001',
-    customerName: 'Liam Johnson',
+    customerName: '利亚姆·约翰逊',
     email: 'liam@example.com',
     date: '2023-07-15',
-    status: 'Delivered',
+    status: '已送达',
     total: '$250.00',
   },
   {
     id: 'ORD002',
-    customerName: 'Olivia Smith',
+    customerName: '奥利维亚·史密斯',
     email: 'olivia@example.com',
     date: '2023-07-16',
-    status: 'Processing',
+    status: '处理中',
     total: '$150.00',
   },
   {
     id: 'ORD003',
-    customerName: 'Noah Williams',
+    customerName: '诺亚·威廉姆斯',
     email: 'noah@example.com',
     date: '2023-07-17',
-    status: 'Cancelled',
+    status: '已取消',
     total: '$350.00',
   },
   {
     id: 'ORD004',
-    customerName: 'Emma Brown',
+    customerName: '艾玛·布朗',
     email: 'emma@example.com',
     date: '2023-07-18',
-    status: 'Delivered',
+    status: '已送达',
     total: '$450.00',
   },
   {
     id: 'ORD005',
-    customerName: 'Ava Jones',
+    customerName: '艾娃·琼斯',
     email: 'ava@example.com',
     date: '2023-07-19',
-    status: 'Processing',
+    status: '处理中',
     total: '$550.00',
   },
   {
     id: 'ORD006',
-    customerName: 'James Davis',
+    customerName: '詹姆斯·戴维斯',
     email: 'james@example.com',
     date: '2023-07-20',
-    status: 'Delivered',
+    status: '已送达',
     total: '$200.00',
   },
 ];
 
 const getStatusVariant = (status: string): 'default' | 'secondary' | 'destructive' => {
     switch (status) {
-        case 'Delivered':
+        case '已送达':
             return 'default';
-        case 'Processing':
+        case '处理中':
             return 'secondary';
-        case 'Cancelled':
+        case '已取消':
             return 'destructive';
         default:
             return 'secondary';
@@ -110,24 +110,24 @@ const Orders: React.FC = () => {
               <div className="grid flex-1 items-start gap-4">
                 <Card>
                   <CardHeader>
-                    <CardTitle>Orders</CardTitle>
+                    <CardTitle>订单</CardTitle>
                     <CardDescription>
-                      Manage your orders and view their status.
+                      管理您的订单并查看其状态。
                     </CardDescription>
                     <div className="pt-2">
-                       <Input placeholder="Search orders by ID or customer name..." />
+                       <Input placeholder="按ID或客户名称搜索订单..." />
                     </div>
                   </CardHeader>
                   <CardContent>
                     <Table>
                       <TableHeader>
                         <TableRow>
-                          <TableHead>Order ID</TableHead>
-                          <TableHead>Customer</TableHead>
-                          <TableHead>Date</TableHead>
-                          <TableHead>Status</TableHead>
-                          <TableHead className="text-right">Total</TableHead>
-                          <TableHead>Actions</TableHead>
+                          <TableHead>订单ID</TableHead>
+                          <TableHead>客户</TableHead>
+                          <TableHead>日期</TableHead>
+                          <TableHead>状态</TableHead>
+                          <TableHead className="text-right">总计</TableHead>
+                          <TableHead>操作</TableHead>
                         </TableRow>
                       </TableHeader>
                       <TableBody>
@@ -148,18 +148,18 @@ const Orders: React.FC = () => {
                                     <DropdownMenuTrigger asChild>
                                         <Button aria-haspopup="true" size="icon" variant="ghost">
                                             <MoreHorizontal className="h-4 w-4" />
-                                            <span className="sr-only">Toggle menu</span>
+                                            <span className="sr-only">切换菜单</span>
                                         </Button>
                                     </DropdownMenuTrigger>
                                     <DropdownMenuContent align="end">
-                                        <DropdownMenuLabel>Actions</DropdownMenuLabel>
-                                        <DropdownMenuItem>View Details</DropdownMenuItem>
-                                        <DropdownMenuItem>Print Invoice</DropdownMenuItem>
+                                        <DropdownMenuLabel>操作</DropdownMenuLabel>
+                                        <DropdownMenuItem>查看详情</DropdownMenuItem>
+                                        <DropdownMenuItem>打印发票</DropdownMenuItem>
                                     </DropdownMenuContent>
                                 </DropdownMenu>
                             </TableCell>
                           </TableRow>
-                        ))}
+                        ))}\
                       </TableBody>
                     </Table>
                   </CardContent>
