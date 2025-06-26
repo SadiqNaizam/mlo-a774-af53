@@ -54,7 +54,7 @@ const LeftSidebar: React.FC<LeftSidebarProps> = ({ isOpen }) => {
                                 </TooltipContent>
                             )}
                         </Tooltip>
-                    ))}\
+                    ))}
                 </nav>
             </div>
         </div>
