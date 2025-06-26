@@ -43,7 +43,7 @@ const KPIWidgetCard: React.FC<KPIWidgetCardProps> = ({ title, metric, change, ch
             )}
             {change}
           </span>
-          <span className="ml-2">from last month</span>
+          <span className="ml-2">与上月相比</span>
         </p>
       </CardContent>
     </Card>
