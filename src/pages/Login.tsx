@@ -27,7 +27,7 @@ import { Input } from "@/components/ui/input";
 
 // Define the form schema using Zod
 const formSchema = z.object({
-  email: z.string().email({ message: "无效的邮箱地址。" }),
+  email: z.string().email({ message: "无效的电子邮件地址。" }),
   password: z.string().min(6, { message: "密码必须至少为6个字符。" }),
 });
 
@@ -99,7 +99,7 @@ const Login = () => {
         <CardFooter className="flex justify-center">
             <p className="text-sm text-center text-muted-foreground">
                 <Link to="#" className="underline">
-                    忘记密码？
+                    忘记密码了？
                 </Link>
             </p>
         </CardFooter>
