@@ -39,14 +39,14 @@ const Header: React.FC<HeaderProps> = () => {
         {/* Desktop Logo */}
         <Link to="/" className="hidden font-bold md:flex items-center gap-2 text-lg">
           <Package className="h-6 w-6" />
-          <span>StorePulse</span>
+          <span>商店脉搏</span>
         </Link>
         {/* Mobile Sidebar Toggle - using Sheet for drawer effect */}
         <Sheet>
           <SheetTrigger asChild>
             <Button variant="outline" size="icon" className="shrink-0 md:hidden">
               <Menu className="h-5 w-5" />
-              <span className="sr-only">Toggle navigation menu</span>
+              <span className="sr-only">切换导航菜单</span>
             </Button>
           </SheetTrigger>
           <SheetContent side="left" className="p-0 w-[280px]">
@@ -55,7 +55,7 @@ const Header: React.FC<HeaderProps> = () => {
               <div className="flex h-16 items-center border-b px-6">
                   <Link to="/" className="flex items-center gap-2 font-semibold">
                       <Package className="h-6 w-6" />
-                      <span>StorePulse</span>
+                      <span>商店脉搏</span>
                   </Link>
               </div>
               <div className="flex-1 overflow-auto py-2">
@@ -73,7 +73,7 @@ const Header: React.FC<HeaderProps> = () => {
             <Search className="absolute left-2.5 top-2.5 h-4 w-4 text-muted-foreground" />
             <Input
               type="search"
-              placeholder="Search products..."
+              placeholder="搜索产品..."
               className="pl-8 sm:w-[300px] md:w-[200px] lg:w-[300px]"
             />
           </div>
@@ -83,19 +83,19 @@ const Header: React.FC<HeaderProps> = () => {
             <Button variant="secondary" size="icon" className="rounded-full">
               <Avatar>
                 <AvatarImage src="https://ui.shadcn.com/avatars/01.png" alt="@storeowner" />
-                <AvatarFallback>SO</AvatarFallback>
+                <AvatarFallback>店主</AvatarFallback>
               </Avatar>
-              <span className="sr-only">Toggle user menu</span>
+              <span className="sr-only">切换用户菜单</span>
             </Button>
           </DropdownMenuTrigger>
           <DropdownMenuContent align="end">
-            <DropdownMenuLabel>My Account</DropdownMenuLabel>
+            <DropdownMenuLabel>我的账户</DropdownMenuLabel>
             <DropdownMenuSeparator />
-            <DropdownMenuItem>Settings</DropdownMenuItem>
-            <DropdownMenuItem>Support</DropdownMenuItem>
+            <DropdownMenuItem>设置</DropdownMenuItem>
+            <DropdownMenuItem>支持</DropdownMenuItem>
             <DropdownMenuSeparator />
             <DropdownMenuItem asChild>
-              <Link to="/login">Logout</Link>
+              <Link to="/login">登出</Link>
             </DropdownMenuItem>
           </DropdownMenuContent>
         </DropdownMenu>
