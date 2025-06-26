@@ -18,27 +18,27 @@ import { CartesianGrid, Line, LineChart, XAxis, YAxis } from "recharts";
 // Mock data for different time ranges
 const MOCK_DATA = {
   '7d': [
-    { date: 'Day 1', sales: 2450 },
-    { date: 'Day 2', sales: 2800 },
-    { date: 'Day 3', sales: 2290 },
-    { date: 'Day 4', sales: 3100 },
-    { date: 'Day 5', sales: 2780 },
-    { date: 'Day 6', sales: 3500 },
-    { date: 'Day 7', sales: 3890 },
+    { date: '第 1 天', sales: 2450 },
+    { date: '第 2 天', sales: 2800 },
+    { date: '第 3 天', sales: 2290 },
+    { date: '第 4 天', sales: 3100 },
+    { date: '第 5 天', sales: 2780 },
+    { date: '第 6 天', sales: 3500 },
+    { date: '第 7 天', sales: 3890 },
   ],
   '30d': Array.from({ length: 30 }, (_, i) => ({
-    date: `Day ${i + 1}`,
+    date: `第 ${i + 1} 天`,
     sales: 2000 + Math.sin(i / 3) * 500 + Math.random() * 600,
   })),
   '90d': Array.from({ length: 90 }, (_, i) => ({
-    date: `Day ${i + 1}`,
+    date: `第 ${i + 1} 天`,
     sales: 2500 + Math.sin(i / 10) * 800 + Math.random() * 800,
   })),
 };
 
 const chartConfig = {
   sales: {
-    label: "Sales",
+    label: "销售额",
     color: "hsl(var(--primary))",
   },
 } satisfies ChartConfig;
@@ -53,19 +53,19 @@ const SalesTrendChart: React.FC = () => {
     <Card>
       <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
         <div>
-          <CardTitle>Sales Trend</CardTitle>
+          <CardTitle>销售趋势</CardTitle>
           <CardDescription>
-            Recent sales performance over the selected period.
+            选定时期内的近期销售业绩。
           </CardDescription>
         </div>
         <Select value={timeRange} onValueChange={(value: '7d' | '30d' | '90d') => setTimeRange(value)}>
           <SelectTrigger className="w-[180px]">
-            <SelectValue placeholder="Select a range" />
+            <SelectValue placeholder="选择一个范围" />
           </SelectTrigger>
           <SelectContent>
-            <SelectItem value="7d">Last 7 Days</SelectItem>
-            <SelectItem value="30d">Last 30 Days</SelectItem>
-            <SelectItem value="90d">Last 90 Days</SelectItem>
+            <SelectItem value="7d">最近7天</SelectItem>
+            <SelectItem value="30d">最近30天</SelectItem>
+            <SelectItem value="90d">最近90天</SelectItem>
           </SelectContent>
         </Select>
       </CardHeader>
